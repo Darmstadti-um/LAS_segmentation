@@ -1,3 +1,5 @@
+# train_data = https://drive.google.com/file/d/15sBqMJ3kWtRNj1fpo49UMoAl8mr2UL71/view?usp=drive_link
+df = pd.read_csv('path')
 df = df.drop("Unnamed: 0",axis = 'columns')
 df = df.dropna()
 x_train = df[["X", "Y", "Z"]]
@@ -12,6 +14,6 @@ x_train = df[["X", "Y", "Z"]]
 x_train = np.asarray(x_train).astype('float32')
 y_train = np.asarray(y_train).astype('float32')
 
-model.fit(x_train, y_train, epochs=N)
+model.fit(x_train, y_train, epochs=N) #N устанавливается самостоятельно
 
 model.save('model.h5')
